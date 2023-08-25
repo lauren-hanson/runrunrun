@@ -1,5 +1,5 @@
 import { Navbar } from "./Navbar";
-import { Hero } from "./Hero";
+import { Dashboard } from "./dashboard/Dashboard";
 import { Sidebar } from "./Sidebar";
 import { Submenu } from "./Submenu";
 import { useGlobalContext } from "./context";
@@ -11,7 +11,7 @@ const App = () => {
   return (<>
     <main>
       <Navbar />
-      <Hero />
+      <Dashboard />
       <Sidebar />
       <Submenu /> 
     </main>
