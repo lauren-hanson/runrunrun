@@ -289,6 +289,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #fff; 
 
 }
 
@@ -302,7 +303,7 @@ nav {
 
 .logo {
   text-transform: none;
-  color: var(--white);
+  color: #fc5200;
   letter-spacing: 3px;
   font-weight: 700;
 }
@@ -324,25 +325,41 @@ nav {
 
 /* 
 ============= 
-Hero
+Dashboard
 =============== 
 */
 
-.hero-container {
+.dashboard-container {
   min-height: calc(100vh - 5rem);
   display: grid;
   place-items: center;
+  background-color: #f7f7f4;
 
 }
 
-.hero-center {
+.dashboard_item1 { 
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.dashboard_item2 { 
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.dashboard_item3 { 
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.dashboard-center {
   color: var(--white);
   width: var(--fluid-width);
   max-width: var(--max-width);
 
 }
 
-.hero-center h1 {
+.dashboard-center h1 {
   font-size: clamp(3rem, 5vw, 5rem);
   margin-bottom: 1rem;
   font-weight: 700;
@@ -350,17 +367,17 @@ Hero
 
 }
 
-.hero-center p {
+.dashboard-center p {
   line-height: 1.5;
 }
 
 @media screen and (min-width:992px) {
-  .hero-center {
+  .dashboard-center {
     text-align: center;
 
   }
 
-  .hero-center p {
+  .dashboard-center p {
     max-width: 35rem;
     margin: 0 auto;
   }
@@ -479,7 +496,7 @@ Nav Links
 
   .nav-link {
     padding: 0 1rem;
-    color: var(--white);
+    color: var(--grey-800);
     background: transparent;
     border-color: transparent;
     font-size: 1.25rem;
