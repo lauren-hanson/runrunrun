@@ -121,4 +121,13 @@ export const users = [
   },
 ]
 
+export const activities = [ 
+  {
+    id: nanoid(),
+    firstName: 'Lauren',
+    lastName: 'Hanson', 
+    image: img1,
+  },
+]
+
 export default sublinks;

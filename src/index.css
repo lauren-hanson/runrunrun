@@ -275,9 +275,13 @@ ul {
 PROJECT CSS 
 =============== 
 */
+
+
 body {
   background: var(--primary-500);
 }
+
+
 
 /* 
 ============= 
@@ -289,7 +293,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff; 
+  background-color: #fff;
 
 }
 
@@ -329,6 +333,18 @@ Dashboard
 =============== 
 */
 
+@media screen and (max-width:992px) {
+  .dashboard_item1, .dashboard_item3  {
+    display: none; 
+  }
+
+  .dashboard_item2 { 
+    position: fixed; 
+    text-align: center;
+  }
+
+}
+
 .dashboard-container {
   min-height: calc(100vh - 5rem);
   display: grid;
@@ -337,17 +353,17 @@ Dashboard
 
 }
 
-.dashboard_item1 { 
+.dashboard_item1 {
   grid-column-start: 1;
   grid-column-end: 2;
 }
 
-.dashboard_item2 { 
+.dashboard_item2 {
   grid-column-start: 2;
   grid-column-end: 3;
 }
 
-.dashboard_item3 { 
+.dashboard_item3 {
   grid-column-start: 3;
   grid-column-end: 4;
 }
@@ -483,7 +499,7 @@ Nav Links
     display: flex;
     justify-content: center;
     align-self: stretch;
-    
+
   }
 
   .nav-center {
@@ -491,7 +507,7 @@ Nav Links
     align-self: stretch;
     display: grid;
     grid-template-columns: auto 1fr;
-   
+
   }
 
   .nav-link {
@@ -532,37 +548,42 @@ Submenu
     transform: rotateX(-90deg) translateX(-50%);
     transform-origin: top;
     perspective: 1000px;
-    border-radius: var(--borderRadius); 
+    border-radius: var(--borderRadius);
     visibility: hidden;
     opacity: 0;
     transition: tranform 0.3s ease-in-out, opacity 0.2s ease-in-out;
-    z-index: -1; 
+    z-index: -1;
 
   }
-  .show-submenu { 
+
+  .show-submenu {
     visibility: visible;
-    opacity: 1; 
+    opacity: 1;
     transform: rotateX(0deg) translateX(-50%);
-    z-index: 10; 
+    z-index: 10;
 
   }
-  .submenu h5{ 
-    margin-bottom: 1rem; 
-    color: var(--primary-700); 
+
+  .submenu h5 {
+    margin-bottom: 1rem;
+    color: var(--primary-700);
   }
-  .submenu-links { 
-    display: grid; 
-    row-gap: 0.5rem; 
+
+  .submenu-links {
+    display: grid;
+    row-gap: 0.5rem;
   }
-  .submenu-links a { 
-    display: block; 
-    color: var(--grey-900); 
-    text-transform: capitalize; 
-    display: flex; 
+
+  .submenu-links a {
+    display: block;
+    color: var(--grey-900);
+    text-transform: capitalize;
+    display: flex;
     align-items: center;
-    gap: 1rem; 
+    gap: 1rem;
   }
-  .submenu-links svg { 
+
+  .submenu-links svg {
     color: var(--grey-500)
   }
 }
