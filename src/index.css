@@ -349,8 +349,8 @@ Dashboard
 .dashboard-container {
   min-height: calc(100vh - 5rem);
   display: flex;
-  background-color: #f4f4f7;
   margin: 1rem;
+  background-color: #f4f4f7;
 
 }
 
@@ -371,8 +371,13 @@ Dashboard
 .dashboard_item2 {
   height: 100%; 
   width: 80%; 
-  margin: 1rem;
+  background-color: #f4f4f7;
+}
+
+.singleActivity { 
+  background-color: #fff; 
   padding: 1rem; 
+  margin: 1rem; 
 }
 
 
