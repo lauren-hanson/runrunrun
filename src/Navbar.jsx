@@ -8,7 +8,7 @@ export const Navbar = () => {
 
     const handleSubmenu = (e) => {
         // console.log(e.target)
-        if(!e.target.classList.contains('nav-link')){
+        if (!e.target.classList.contains('nav-link')) {
             setPageId(null)
         }
     }
@@ -30,6 +30,10 @@ export const Navbar = () => {
                 {/* nav links here */}
                 <NavLinks />
             </div>
+            <button
+                className='btn subscribe-btn'>
+                Subscribe
+            </button>
         </nav>
     </>)
 }

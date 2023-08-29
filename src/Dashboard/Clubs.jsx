@@ -3,6 +3,6 @@
 export const Clubs = () => { 
 
     return(<>
-        <h5>Clubs</h5>
+        <p>Clubs</p>
     </>)
 }
