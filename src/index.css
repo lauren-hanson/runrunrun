@@ -142,14 +142,15 @@ ul {
 .btn {
   cursor: pointer;
   color: var(--white);
-  background: var(--primary-500);
+  background: #fc5200;
   border: transparent;
   border-radius: var(--borderRadius);
   letter-spacing: var(--letterSpacing);
-  padding: 0.375rem 0.75rem;
+  padding: 0.75rem 1rem;
   box-shadow: var(--shadow-1);
   transition: var(--transition);
   text-transform: capitalize;
+  font-weight: bold;
   display: inline-block;
 }
 
@@ -275,9 +276,13 @@ ul {
 PROJECT CSS 
 =============== 
 */
+
+
 body {
-  background: var(--primary-500);
+  background: #f4f4f7;
 }
+
+
 
 /* 
 ============= 
@@ -289,7 +294,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff; 
+  background-color: #fff;
 
 }
 
@@ -329,31 +334,88 @@ Dashboard
 =============== 
 */
 
+/* @media screen and (max-width:992px) {
+  .dashboard_item1, .dashboard_item3  {
+    display: none; 
+  }
+
+  .dashboard_item2 { 
+    position: fixed; 
+    text-align: center;
+  }
+
+} */
+
 .dashboard-container {
   min-height: calc(100vh - 5rem);
-  display: grid;
-  place-items: center;
-  background-color: #f7f7f4;
+  display: flex;
+  margin: 1rem;
+  background-color: #f4f4f7;
 
 }
 
-.dashboard_item1 { 
-  grid-column-start: 1;
-  grid-column-end: 2;
+.dashboard_item1, .dashboard_item2, .dashboard_item3 { 
+  border: 1px solid #fff; 
+  background-color: #fff; 
+  min-height: calc(100vh - 5rem);
+  padding: 10px; 
 }
 
-.dashboard_item2 { 
-  grid-column-start: 2;
-  grid-column-end: 3;
+.dashboard_item1, .dashboard_item3 { 
+  height: 100%; 
+  width: 25%; 
+  margin: 1rem ; 
+  text-align: center; 
 }
 
-.dashboard_item3 { 
-  grid-column-start: 3;
-  grid-column-end: 4;
+.dashboard_item2 {
+  height: 100%; 
+  width: 80%; 
+  background-color: #f4f4f7;
+}
+
+.singleActivity { 
+  background-color: #fff; 
+  padding: 1rem; 
+  margin: 1rem; 
+}
+
+
+
+/* @media screen and (min-width:992px) {
+
+  .dashboard-container {
+    border: 1px solid #fff;
+    background-color: #fff;
+    min-height: calc(100vh - 5rem);
+    padding: 10px;
+  }
+
+  .dashboard_item1,
+  .dashboard_item3 {
+    height: 100%;
+    width: 35%;
+    margin: 1rem;
+    text-align: center;
+  }
+
+  .dashboard_item2 {
+    height: 100%;
+    width: 100%;
+    margin: 1rem;
+  }
+
+} */
+
+
+
+img {
+  width: 7rem;
+  border-radius: 50%;
 }
 
 .dashboard-center {
-  color: var(--white);
+  color: black;
   width: var(--fluid-width);
   max-width: var(--max-width);
 
@@ -382,9 +444,11 @@ Dashboard
     margin: 0 auto;
   }
 
-  .toggle-btn {
-    display: none;
+  .nav-links { 
+    display: none; 
   }
+
+ 
 }
 
 /* 
@@ -477,21 +541,21 @@ Nav Links
 .nav-links {
   display: none;
 }
+/* align-self is making sure the submenu stays visible when hover over options */
 
 @media screen and (min-width:992px) {
   .nav-links {
     display: flex;
     justify-content: center;
     align-self: stretch;
-    
+
   }
 
   .nav-center {
-    /* align-self is making sure the submenu stays visible when hover over options */
     align-self: stretch;
     display: grid;
     grid-template-columns: auto 1fr;
-   
+
   }
 
   .nav-link {
@@ -504,6 +568,10 @@ Nav Links
     letter-spacing: var(--letterSpacing);
     cursor: pointer;
 
+  }
+
+  .subscribe-btn, .btn {
+    display: none;
   }
 }
 
@@ -532,37 +600,42 @@ Submenu
     transform: rotateX(-90deg) translateX(-50%);
     transform-origin: top;
     perspective: 1000px;
-    border-radius: var(--borderRadius); 
+    border-radius: var(--borderRadius);
     visibility: hidden;
     opacity: 0;
     transition: tranform 0.3s ease-in-out, opacity 0.2s ease-in-out;
-    z-index: -1; 
+    z-index: -1;
 
   }
-  .show-submenu { 
+
+  .show-submenu {
     visibility: visible;
-    opacity: 1; 
+    opacity: 1;
     transform: rotateX(0deg) translateX(-50%);
-    z-index: 10; 
+    z-index: 10;
 
   }
-  .submenu h5{ 
-    margin-bottom: 1rem; 
-    color: var(--primary-700); 
+
+  .submenu h5 {
+    margin-bottom: 1rem;
+    color: var(--primary-700);
   }
-  .submenu-links { 
-    display: grid; 
-    row-gap: 0.5rem; 
+
+  .submenu-links {
+    display: grid;
+    row-gap: 0.5rem;
   }
-  .submenu-links a { 
-    display: block; 
-    color: var(--grey-900); 
-    text-transform: capitalize; 
-    display: flex; 
+
+  .submenu-links a {
+    display: block;
+    color: var(--grey-900);
+    text-transform: capitalize;
+    display: flex;
     align-items: center;
-    gap: 1rem; 
+    gap: 1rem;
   }
-  .submenu-links svg { 
+
+  .submenu-links svg {
     color: var(--grey-500)
   }
 }

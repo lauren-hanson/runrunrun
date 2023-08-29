@@ -8,7 +8,7 @@ export const Dashboard = () => {
         <div className="dashboard-container">
             <DashboardProfile />
             <DashboardFeed />
-            <DashboardSidebar /> 
+            {/* <DashboardSidebar />  */}
         </div>
     </>)
 }

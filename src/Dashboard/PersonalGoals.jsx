@@ -2,6 +2,6 @@
 export const PersonalGoals = () => { 
 
     return(<>
-        <h5>PersonalGoals</h5>
+        <p>PersonalGoals</p>
     </>)
 }
